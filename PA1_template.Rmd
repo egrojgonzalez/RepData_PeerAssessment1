@@ -13,11 +13,8 @@ This assignment makes use of data from a personal activity monitoring device. Th
 
 ##Data
 
-The data for this assignment can be downloaded from the course web site:
+The data for this assignment can be downloaded from the course web site: [Activity monitoring data](https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip) [52K]  
 
-https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip
-
-Dataset: Activity monitoring data [52K]
 The variables included in this dataset are:
 
 - steps: Number of steps taking in a 5-minute interval (missing values are coded as NA)
@@ -45,7 +42,7 @@ if(!file.exists("repdata-data-activity")) {
  data <- read.csv("activity.csv",colClasses = c("numeric","Date","numeric"))
 ```
 
-## What is mean total number of steps taken per day?
+## What is the mean of total number of steps taken per day?
  Using aggregate function,
  aggregate steps as per date to get total number of steps in a day and then plot histogram
  and display mean/median of total number of steps taken per day  
@@ -81,7 +78,7 @@ ggplot(avepathern5min, aes(x=interval,y=steps)) +
 
 5-minute interval containing the maximum number of steps (averaged across all days)
 ```{r}
-  avepathern5min[which.max(avepathern5min$steps), ]
+    avepathern5min[which.max(avepathern5min$steps), ]
 ```
 
 
